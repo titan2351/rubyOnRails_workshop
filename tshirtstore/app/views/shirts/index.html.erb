@@ -1,0 +1,18 @@
+<h1>All Shirts</h1>
+<table>
+        <tr>
+                <td>Color</td>
+                <td>Size</td>
+                <td>Description</td>
+                <td>Price</td>
+        </tr>
+        <% @shirts.each do |shirt| %>
+                <tr>
+                        <td><%= shirt.color %></td>
+                        <td><%= shirt.size %></td>
+                        <td><%= shirt.description %></td>
+                        <td>£<%= shirt.price %></td>
+                </tr>
+        <% end %>
+</table>
+<%= link_to "New Shirt", :action => "new" %>

@@ -1,0 +1,9 @@
+<h1>View Shirt</h1>
+        Color: <%= @shirt.color %><br />
+        Size: <%= @shirt.size %><br />
+        Description: <%= @shirt.description %><br />
+        Price: <%= @shirt.price %><br /><br />
+        <%= link_to "Back to All Shirts", :action => "index" %>
+<% @shirts.each do |shirt| %>
+<p><%= shirt.color %> (<%= shirt.size %>)</p>
+<% end %>
